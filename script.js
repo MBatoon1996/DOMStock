@@ -48,6 +48,14 @@ $(document).ready(function(){
         // $(this).parent().parent().remove();      also works
         updatePortfolioValueAndProfit();
     });
+
+    var timeout;
+    $('tr input').on('input', function(){
+        clearTimeout(timeout);
+        timeout = setTimeout(function(){
+            updatePortfolioValueAndProfit();
+        }, 1000);
+    });
 });
 
 
