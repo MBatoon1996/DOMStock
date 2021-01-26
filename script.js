@@ -6,5 +6,6 @@ $(document).ready(function(){
         // Market value is number of shares * market price per share
         var marketValue = sharesOwned * marketPrice;
         console.log(marketValue);
+        $(ele).children('.marketValue').html(marketValue);
     });
 });
