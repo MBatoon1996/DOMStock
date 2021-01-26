@@ -23,7 +23,7 @@ var updateUnrealizedProfit = function(ele, marketValue){
 
 var sum = function (acc, x) { return acc + x; };
 
-$(document).ready(function () {
+var updatePortfolioValueAndProfit = function() {
   var stocksMarketValues = [];
   var stocksUnrealizedProfits = [];
 
@@ -38,6 +38,10 @@ $(document).ready(function () {
   var portfolioUnrealizedProfit = stocksUnrealizedProfits.reduce(sum);
   $('#portfolioValue').html(portfolioMarketValue);
   $('#portfolioProfit').html(portfolioUnrealizedProfit);
-});
+};
+
+$(document).ready(function(){
+    updatePortfolioValueAndProfit();
+})
 
 
