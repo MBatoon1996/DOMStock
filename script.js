@@ -42,6 +42,14 @@ var updatePortfolioValueAndProfit = function() {
 
 $(document).ready(function(){
     updatePortfolioValueAndProfit();
-})
+
+    $('.btn.remove').on('click', function(event){
+        $(this).closest('tr').remove();
+        // $(this).parent().parent().remove();      also works
+        updatePortfolioValueAndProfit();
+    });
+});
+
+
 
 
